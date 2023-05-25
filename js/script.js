@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', () =>{
             if (newFilm.length > 21) {
                 newFilm = `${newFilm.substring(0,22)}...`;
             }
+            if (favorite) {
+                console.log('Добавляем любимый фильм')
+            }
 
             movieDB.movies.push(newFilm);
             sortArr(movieDB.movies);
@@ -106,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     deleteAdv(adv);
     makeChanges();
-    sortArr(movieDB.movies);
     createMovieList(movieDB.movies, movieList);
 });
 
